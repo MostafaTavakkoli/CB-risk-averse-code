@@ -2,7 +2,7 @@ import numpy as np
 
 
 # Very simple class definitions to create a Priced Timed Automaton
-
+## Something is wrong with this function that makes the solution stay at tBuff
 
 class ptaState:
     globalConsts = []

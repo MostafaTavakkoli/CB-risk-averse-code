@@ -5,7 +5,6 @@ import numpy as np
 
 # Check if needed
 # sys.path.append(r'C:\Users\ikoval\Desktop\z3-master\build\python')
-
 # Some global functions 
 # Do a loop with list instead
 def makeArr1(st, ty, flavor = 'p'):
