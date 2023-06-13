@@ -449,6 +449,14 @@ class ptaSolver:
                         for trans in self.pta.transList:
                             if trans.name == q[:-2]:
                                 pathstateList.append(str(trans.source.name))
+                        r=str(b).split('_')
+                        horizon_step_no = r[-1]
+                        if horizon_step_no == str(len(Bs)-1):
+                            for trans in self.pta.transList:
+                                if trans.name == q[:-2]:
+                                    print(str(trans.dest.name))
+                                    pathstateList.append(str(trans.dest.name))
+
                     else:
                         continue
                 print('')

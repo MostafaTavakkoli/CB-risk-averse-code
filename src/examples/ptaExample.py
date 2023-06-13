@@ -43,13 +43,13 @@ AGV3_Q.invs = [co2l, co2g]
 # Failed States
 # work with global constraints for now
 # pd.ptaState().addConstr([co1l, co2l, co2g, co3g, co3l])
-markedstateList = [storage]
+markedstateList = [AGV3_Q,storage]
 remainingstateList = markedstateList
 
 stateList = [qCheck, AGV3_Q, AGV4_Q, tBuffr, storage]
 transList = [tr1, tr2, tr3, tr4, tr5]
 A = pd.PTA(stateList, transList, [qCheck], remainingstateList)
-solver = ps.ptaSolver(A, 5,'min',0,1)
+solver = ps.ptaSolver(A, 4,'min',0,1)
 ## Here for some reason, the solution stays at tBuff no matter how wide the horizon is defined.
 #t0 = time.time()
 solver.solvePTA()
